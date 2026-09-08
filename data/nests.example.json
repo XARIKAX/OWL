@@ -1,0 +1,4097 @@
+{
+  "sample": false,
+  "updated": "2026-09-08T21:45:00.000Z",
+  "priceUsd": 0.0031,
+  "nests": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "pair": "AAPL / OWL",
+      "tvl": 53802,
+      "vol24h": 79859,
+      "fees24h": 191,
+      "fees7d": 1398,
+      "feesLifetime": 9488,
+      "lps": 53,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 1478
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 1397
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 2006
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 1456
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 1927
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 1161
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 1284
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 1079
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 1937
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 1568
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 2982
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 2833
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 3559
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 2499
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 2889
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 8266
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 6184
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 6038
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 6582
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 4083
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 5551
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 4121
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 4692
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 4288
+        }
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "pair": "TSLA / OWL",
+      "tvl": 43865,
+      "vol24h": 36370,
+      "fees24h": 89,
+      "fees7d": 580,
+      "feesLifetime": 3904,
+      "lps": 41,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 543
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 814
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 430
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 766
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 738
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 523
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 948
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 544
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 600
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 980
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 999
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 1327
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 1545
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 1367
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 1611
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 1732
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 2150
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 2961
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 2435
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 3145
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 3594
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 3647
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 1945
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 1026
+        }
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "pair": "NVDA / OWL",
+      "tvl": 41623,
+      "vol24h": 25042,
+      "fees24h": 64,
+      "fees7d": 415,
+      "feesLifetime": 2834,
+      "lps": 44,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 522
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 489
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 656
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 472
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 607
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 409
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 364
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 661
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 360
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 400
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 1429
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 671
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 1343
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 759
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 715
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 2088
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1906
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 1854
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 2222
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1174
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 2387
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1617
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 1105
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 831
+        }
+      ]
+    },
+    {
+      "ticker": "SPY",
+      "name": "S&P 500",
+      "pair": "SPY / OWL",
+      "tvl": 33660,
+      "vol24h": 58036,
+      "fees24h": 154,
+      "fees7d": 979,
+      "feesLifetime": 4400,
+      "lps": 51,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 881
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 864
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 1103
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 1517
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 1443
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 1269
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 700
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 719
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 1267
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 1021
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 2893
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 2870
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 1558
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 2824
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 2665
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 3414
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 5764
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 4583
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 4122
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 4238
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 4368
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 2918
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 2332
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 2705
+        }
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "pair": "MSFT / OWL",
+      "tvl": 31405,
+      "vol24h": 36626,
+      "fees24h": 101,
+      "fees7d": 658,
+      "feesLifetime": 4052,
+      "lps": 42,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 538
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 687
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 754
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 868
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 1049
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 609
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 753
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 901
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 667
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 539
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 2005
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 1035
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 2378
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 1385
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 1130
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 2706
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 4085
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 1901
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 2613
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 2380
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 3147
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 2105
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 1309
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 1080
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "pair": "AMZN / OWL",
+      "tvl": 34610,
+      "vol24h": 18978,
+      "fees24h": 43,
+      "fees7d": 313,
+      "feesLifetime": 1811,
+      "lps": 48,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 345
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 270
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 465
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 424
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 487
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 246
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 291
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 276
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 281
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 516
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 1107
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 958
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 765
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 598
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 847
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 1701
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1494
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 946
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1261
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1406
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1326
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1238
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 1117
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 612
+        }
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "pair": "GOOGL / OWL",
+      "tvl": 25832,
+      "vol24h": 23185,
+      "fees24h": 56,
+      "fees7d": 361,
+      "feesLifetime": 2004,
+      "lps": 39,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 564
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 339
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 366
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 276
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 469
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 266
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 456
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 372
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 389
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 383
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 1000
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 765
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 1343
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 1057
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 1341
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 1961
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1821
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 2127
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1099
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1860
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1507
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1132
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 1096
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 1194
+        }
+      ]
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "pair": "META / OWL",
+      "tvl": 28558,
+      "vol24h": 20139,
+      "fees24h": 55,
+      "fees7d": 346,
+      "feesLifetime": 1355,
+      "lps": 22,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 328
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 445
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 449
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 308
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 477
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 277
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 526
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 514
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 439
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 278
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 521
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 1040
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 756
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 587
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 539
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 1704
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1793
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 1986
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 983
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1663
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1373
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1723
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 935
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 497
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "pair": "AMD / OWL",
+      "tvl": 23321,
+      "vol24h": 27692,
+      "fees24h": 70,
+      "fees7d": 503,
+      "feesLifetime": 2168,
+      "lps": 21,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 319
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 395
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 326
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 691
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 445
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 427
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 406
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 367
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 551
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 545
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 1150
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 1014
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 894
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 1452
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 1441
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 2519
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 2733
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 2067
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1567
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1466
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1541
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 2805
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 1296
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 1275
+        }
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "pair": "PLTR / OWL",
+      "tvl": 23802,
+      "vol24h": 38999,
+      "fees24h": 104,
+      "fees7d": 660,
+      "feesLifetime": 3778,
+      "lps": 26,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 896
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 441
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 613
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 562
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 861
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 778
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 672
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 508
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 966
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 468
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 1404
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 1319
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 1563
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 1163
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 1549
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 3554
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 3380
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 2829
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 3301
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 3854
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 3430
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 2215
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 1407
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 1265
+        }
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "pair": "AVGO / OWL",
+      "tvl": 17212,
+      "vol24h": 22282,
+      "fees24h": 59,
+      "fees7d": 419,
+      "feesLifetime": 2627,
+      "lps": 21,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 255
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 513
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 334
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 302
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 374
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 528
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 379
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 405
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 291
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 373
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 619
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 822
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 1242
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 1180
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 1036
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 2177
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1085
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 2007
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1361
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 2131
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1764
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1389
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 760
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 957
+        }
+      ]
+    },
+    {
+      "ticker": "TSM",
+      "name": "TSMC",
+      "pair": "TSM / OWL",
+      "tvl": 14338,
+      "vol24h": 7324,
+      "fees24h": 20,
+      "fees7d": 146,
+      "feesLifetime": 813,
+      "lps": 18,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 141
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 134
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 151
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 115
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 189
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 104
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 88
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 111
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 163
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 193
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 307
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 307
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 342
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 346
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 347
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 639
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 476
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 411
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 479
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 438
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 740
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 448
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 247
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 410
+        }
+      ]
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML",
+      "pair": "ASML / OWL",
+      "tvl": 12016,
+      "vol24h": 8816,
+      "fees24h": 22,
+      "fees7d": 139,
+      "feesLifetime": 624,
+      "lps": 15,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 103
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 145
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 141
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 195
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 185
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 156
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 205
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 211
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 198
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 123
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 323
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 241
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 474
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 356
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 397
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 655
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 724
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 824
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 506
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 543
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 849
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 473
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 352
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 436
+        }
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "pair": "NFLX / OWL",
+      "tvl": 11185,
+      "vol24h": 15203,
+      "fees24h": 37,
+      "fees7d": 232,
+      "feesLifetime": 1413,
+      "lps": 13,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 187
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 318
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 255
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 211
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 388
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 388
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 311
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 344
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 335
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 186
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 834
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 398
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 376
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 381
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 791
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 1048
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1101
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 998
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1389
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1057
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1369
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1036
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 680
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 822
+        }
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "pair": "COIN / OWL",
+      "tvl": 14009,
+      "vol24h": 17079,
+      "fees24h": 36,
+      "fees7d": 242,
+      "feesLifetime": 1457,
+      "lps": 23,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 221
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 351
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 410
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 270
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 406
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 235
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 195
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 262
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 331
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 249
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 895
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 856
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 673
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 873
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 673
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 1533
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1267
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 1093
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1526
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1334
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 739
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1327
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 599
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 759
+        }
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "pair": "HOOD / OWL",
+      "tvl": 9810,
+      "vol24h": 16722,
+      "fees24h": 45,
+      "fees7d": 306,
+      "feesLifetime": 1351,
+      "lps": 13,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 466
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 251
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 312
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 229
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 408
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 435
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 371
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 281
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 460
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 388
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 537
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 605
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 560
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 859
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 921
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 1463
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 976
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 1550
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 923
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1017
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 999
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 970
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 783
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 958
+        }
+      ]
+    },
+    {
+      "ticker": "MSTR",
+      "name": "Strategy",
+      "pair": "MSTR / OWL",
+      "tvl": 11304,
+      "vol24h": 18641,
+      "fees24h": 50,
+      "fees7d": 343,
+      "feesLifetime": 2039,
+      "lps": 14,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 373
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 351
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 253
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 226
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 446
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 498
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 327
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 239
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 289
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 404
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 944
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 964
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 904
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 996
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 975
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 876
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 1711
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 1129
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1380
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1314
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1321
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1525
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 574
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 624
+        }
+      ]
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Nasdaq 100",
+      "pair": "QQQ / OWL",
+      "tvl": 9160,
+      "vol24h": 3814,
+      "fees24h": 8,
+      "fees7d": 51,
+      "feesLifetime": 344,
+      "lps": 14,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 89
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 54
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 94
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 47
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 75
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 73
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 84
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 62
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 73
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 63
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 118
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 175
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 134
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 190
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 192
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 272
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 197
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 255
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 345
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 271
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 244
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 365
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 140
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 204
+        }
+      ]
+    },
+    {
+      "ticker": "IBM",
+      "name": "IBM",
+      "pair": "IBM / OWL",
+      "tvl": 7770,
+      "vol24h": 5503,
+      "fees24h": 15,
+      "fees7d": 106,
+      "feesLifetime": 664,
+      "lps": 9,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 65
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 110
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 133
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 108
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 132
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 139
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 111
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 140
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 73
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 101
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 192
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 179
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 255
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 278
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 274
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 242
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 545
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 434
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 363
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 525
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 362
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 317
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 270
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 155
+        }
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "pair": "INTC / OWL",
+      "tvl": 7807,
+      "vol24h": 11673,
+      "fees24h": 27,
+      "fees7d": 178,
+      "feesLifetime": 1057,
+      "lps": 9,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 215
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 135
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 282
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 216
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 172
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 156
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 209
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 302
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 199
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 189
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 565
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 646
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 436
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 357
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 599
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 678
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 787
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 692
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 1039
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 554
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 1220
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1051
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 612
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 363
+        }
+      ]
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "pair": "NET / OWL",
+      "tvl": 7613,
+      "vol24h": 4593,
+      "fees24h": 12,
+      "fees7d": 84,
+      "feesLifetime": 462,
+      "lps": 9,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 101
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 72
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 80
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 99
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 105
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 64
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 57
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 56
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 76
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 90
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 127
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 180
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 171
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 163
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 226
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 236
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 380
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 306
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 424
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 379
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 403
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 355
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 216
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 227
+        }
+      ]
+    },
+    {
+      "ticker": "SOXX",
+      "name": "Semiconductors",
+      "pair": "SOXX / OWL",
+      "tvl": 5521,
+      "vol24h": 10146,
+      "fees24h": 24,
+      "fees7d": 176,
+      "feesLifetime": 680,
+      "lps": 12,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 257
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 203
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 176
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 188
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 164
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 156
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 152
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 175
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 215
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 118
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 361
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 256
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 370
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 258
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 408
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 764
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 583
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 992
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 509
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 1058
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 810
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 1042
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 440
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 492
+        }
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "pair": "CRWD / OWL",
+      "tvl": 4941,
+      "vol24h": 3633,
+      "fees24h": 10,
+      "fees7d": 67,
+      "feesLifetime": 449,
+      "lps": 7,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 47
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 70
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 77
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 75
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 78
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 47
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 86
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 86
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 48
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 79
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 122
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 111
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 145
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 93
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 115
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 313
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 279
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 341
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 338
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 337
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 179
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 199
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 182
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 187
+        }
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "pair": "ORCL / OWL",
+      "tvl": 3936,
+      "vol24h": 3242,
+      "fees24h": 7,
+      "fees7d": 49,
+      "feesLifetime": 243,
+      "lps": 8,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 52
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 44
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 84
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 80
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 81
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 86
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 52
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 71
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 58
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 82
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 135
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 170
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 176
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 91
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 153
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 171
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 156
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 169
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 164
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 295
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 308
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 296
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 157
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 111
+        }
+      ]
+    },
+    {
+      "ticker": "UBER",
+      "name": "Uber",
+      "pair": "UBER / OWL",
+      "tvl": 4706,
+      "vol24h": 5625,
+      "fees24h": 14,
+      "fees7d": 105,
+      "feesLifetime": 727,
+      "lps": 9,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 85
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 102
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 130
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 130
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 116
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 120
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 128
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 141
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 151
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 88
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 175
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 164
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 260
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 315
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 313
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 465
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 306
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 319
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 581
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 397
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 399
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 412
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 159
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 170
+        }
+      ]
+    },
+    {
+      "ticker": "SHOP",
+      "name": "Shopify",
+      "pair": "SHOP / OWL",
+      "tvl": 3903,
+      "vol24h": 1698,
+      "fees24h": 5,
+      "fees7d": 36,
+      "feesLifetime": 171,
+      "lps": 8,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 41
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 21
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 20
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 21
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 42
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 39
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 36
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 43
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 43
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 43
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 57
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 46
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 48
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 67
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 61
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 152
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 127
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 130
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 111
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 154
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 140
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 142
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 57
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 59
+        }
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm",
+      "pair": "ARM / OWL",
+      "tvl": 3552,
+      "vol24h": 6655,
+      "fees24h": 15,
+      "fees7d": 99,
+      "feesLifetime": 384,
+      "lps": 8,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 90
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 163
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 147
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 172
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 104
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 113
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 129
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 111
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 114
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 119
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 376
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 268
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 344
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 283
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 284
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 637
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 330
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 433
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 567
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 497
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 420
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 377
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 319
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 259
+        }
+      ]
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron",
+      "pair": "MU / OWL",
+      "tvl": 3420,
+      "vol24h": 5258,
+      "fees24h": 12,
+      "fees7d": 90,
+      "feesLifetime": 649,
+      "lps": 6,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 73
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 110
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 116
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 93
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 126
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 120
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 113
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 127
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 106
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 67
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 171
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 285
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 157
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 240
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 206
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 461
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 315
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 261
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 520
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 513
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 404
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 262
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 211
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 200
+        }
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "pair": "LLY / OWL",
+      "tvl": 2665,
+      "vol24h": 1925,
+      "fees24h": 5,
+      "fees7d": 34,
+      "feesLifetime": 220,
+      "lps": 5,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 40
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 46
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 48
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 46
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 51
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 31
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 27
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 42
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 45
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 34
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 103
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 69
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 76
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 107
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 103
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 122
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 175
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 107
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 98
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 137
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 93
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 153
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 69
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 102
+        }
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan",
+      "pair": "JPM / OWL",
+      "tvl": 2844,
+      "vol24h": 2044,
+      "fees24h": 5,
+      "fees7d": 36,
+      "feesLifetime": 149,
+      "lps": 6,
+      "hourly": [
+        {
+          "hour": 1125,
+          "state": "hunting",
+          "volume": 45
+        },
+        {
+          "hour": 1185,
+          "state": "hunting",
+          "volume": 52
+        },
+        {
+          "hour": 1245,
+          "state": "hunting",
+          "volume": 24
+        },
+        {
+          "hour": 1305,
+          "state": "hunting",
+          "volume": 49
+        },
+        {
+          "hour": 1365,
+          "state": "hunting",
+          "volume": 46
+        },
+        {
+          "hour": 1425,
+          "state": "hunting",
+          "volume": 40
+        },
+        {
+          "hour": 45,
+          "state": "hunting",
+          "volume": 35
+        },
+        {
+          "hour": 105,
+          "state": "hunting",
+          "volume": 29
+        },
+        {
+          "hour": 165,
+          "state": "hunting",
+          "volume": 24
+        },
+        {
+          "hour": 225,
+          "state": "hunting",
+          "volume": 50
+        },
+        {
+          "hour": 285,
+          "state": "stirring",
+          "volume": 107
+        },
+        {
+          "hour": 345,
+          "state": "stirring",
+          "volume": 60
+        },
+        {
+          "hour": 405,
+          "state": "stirring",
+          "volume": 75
+        },
+        {
+          "hour": 465,
+          "state": "stirring",
+          "volume": 112
+        },
+        {
+          "hour": 525,
+          "state": "stirring",
+          "volume": 54
+        },
+        {
+          "hour": 585,
+          "state": "asleep",
+          "volume": 184
+        },
+        {
+          "hour": 645,
+          "state": "asleep",
+          "volume": 207
+        },
+        {
+          "hour": 705,
+          "state": "asleep",
+          "volume": 194
+        },
+        {
+          "hour": 765,
+          "state": "asleep",
+          "volume": 171
+        },
+        {
+          "hour": 825,
+          "state": "asleep",
+          "volume": 173
+        },
+        {
+          "hour": 885,
+          "state": "asleep",
+          "volume": 95
+        },
+        {
+          "hour": 945,
+          "state": "asleep",
+          "volume": 104
+        },
+        {
+          "hour": 1005,
+          "state": "stirring",
+          "volume": 53
+        },
+        {
+          "hour": 1065,
+          "state": "stirring",
+          "volume": 61
+        }
+      ]
+    }
+  ],
+  "buybacks": [
+    {
+      "time": "2026-09-07T23:41:20.488Z",
+      "state": "hunting",
+      "usd": 943,
+      "owl": 304194
+    },
+    {
+      "time": "2026-09-07T12:25:25.032Z",
+      "state": "hunting",
+      "usd": 964,
+      "owl": 310968
+    },
+    {
+      "time": "2026-09-07T04:47:20.199Z",
+      "state": "hunting",
+      "usd": 246,
+      "owl": 79355
+    },
+    {
+      "time": "2026-09-07T03:28:43.964Z",
+      "state": "hunting",
+      "usd": 770,
+      "owl": 248387
+    },
+    {
+      "time": "2026-09-06T23:55:02.730Z",
+      "state": "hunting",
+      "usd": 406,
+      "owl": 130968
+    },
+    {
+      "time": "2026-09-06T12:51:47.267Z",
+      "state": "hunting",
+      "usd": 832,
+      "owl": 268387
+    },
+    {
+      "time": "2026-09-05T23:57:07.475Z",
+      "state": "hunting",
+      "usd": 599,
+      "owl": 193226
+    },
+    {
+      "time": "2026-09-05T13:29:18.524Z",
+      "state": "hunting",
+      "usd": 822,
+      "owl": 265161
+    },
+    {
+      "time": "2026-09-04T23:10:23.981Z",
+      "state": "stirring",
+      "usd": 408,
+      "owl": 131613
+    },
+    {
+      "time": "2026-09-04T02:56:03.713Z",
+      "state": "awake",
+      "usd": 171,
+      "owl": 55161
+    },
+    {
+      "time": "2026-09-04T00:59:42.230Z",
+      "state": "awake",
+      "usd": 383,
+      "owl": 123548
+    },
+    {
+      "time": "2026-09-03T05:14:30.544Z",
+      "state": "awake",
+      "usd": 136,
+      "owl": 43871
+    },
+    {
+      "time": "2026-09-02T05:51:38.962Z",
+      "state": "awake",
+      "usd": 531,
+      "owl": 171290
+    },
+    {
+      "time": "2026-09-02T02:10:21.982Z",
+      "state": "awake",
+      "usd": 182,
+      "owl": 58710
+    }
+  ],
+  "totals": {
+    "tvl": 498190,
+    "vol24h": 536802,
+    "fees24h": 1355,
+    "fees7d": 9151,
+    "feesLifetime": 52317,
+    "lps": 614
+  },
+  "hunt": {
+    "boughtUsd": 10463,
+    "boughtOwl": 3375161,
+    "count": 125
+  },
+  "note": "Example shape for live data. Set sample:false and publish as data/nests.json."
+}
