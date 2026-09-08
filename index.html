@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-state="awake" data-live="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OWL — Markets sleep. OWL hunts.</title>
+  <meta name="description" content="OWL is the liquidity hub for tokenized equities on Robinhood Chain. A time-aware fee engine: cheap while the NYSE is open, expensive while it is closed. Markets sleep. OWL hunts.">
+  <meta name="theme-color" content="#06080F">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Set og:image and og:url to absolute URLs once the domain is live. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OWL — Markets sleep. OWL hunts.">
+  <meta property="og:description" content="Liquidity for the hours nobody else prices. A time-aware fee hub for tokenized stocks on Robinhood Chain.">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OWL — Markets sleep. OWL hunts.">
+  <meta name="twitter:description" content="Liquidity for the hours nobody else prices. A time-aware fee hub for tokenized stocks on Robinhood Chain.">
+  <meta name="twitter:image" content="assets/og.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#top" aria-label="OWL home">
+      <svg class="logo-eyes" viewBox="0 0 44 20" aria-hidden="true" focusable="false">
+        <circle cx="10" cy="10" r="7.5" fill="none" stroke="#F5B942" stroke-width="2.6"/>
+        <circle cx="34" cy="10" r="7.5" fill="none" stroke="#F5B942" stroke-width="2.6"/>
+      </svg>
+      <span>OWL</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#thesis">Thesis</a>
+      <a href="#mechanism">Mechanism</a>
+      <a href="#hunt">The hunt</a>
+      <a href="#token">Token</a>
+      <a href="#parliament">Parliament</a>
+    </nav>
+    <a class="pill" href="#mechanism" aria-label="Current OWL state">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="nav-state">Awake</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <span id="nav-fee">0.60%</span>
+      <span class="sep nav-time" aria-hidden="true">·</span>
+      <span class="nav-time" id="nav-time">--:-- ET</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" aria-labelledby="status">
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="live-dot live-only" aria-hidden="true"></span>
+            <span id="eyebrow">Live · NYSE clock · Eastern time</span>
+          </p>
+          <h1 class="status" id="status" aria-live="polite" aria-atomic="true">OWL IS<br><em id="status-word">AWAKE</em></h1>
+          <p class="lede" id="lede">No anchor until 4:00. OWL pools are the price.</p>
+          <dl class="hero-meta">
+            <div>
+              <dt>Fee now</dt>
+              <dd class="fee" id="fee">0.60%</dd>
+            </div>
+            <div>
+              <dt>Next</dt>
+              <dd><span id="next">Stirs at 4:00 ET</span> <span class="in" id="next-in"></span><button class="backlive" id="backlive-hero" type="button">← back to live</button></dd>
+            </div>
+            <div>
+              <dt>Clock</dt>
+              <dd class="clock" id="clock">— ET</dd>
+            </div>
+            <div>
+              <dt>Since</dt>
+              <dd class="clock" id="since">—</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-owl">
+          <svg class="owl" id="owl" viewBox="0 0 420 340" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="g-iris" cx="50%" cy="45%" r="55%">
+                <stop offset="0" stop-color="#FFD98A"/>
+                <stop offset=".55" stop-color="#F5B942"/>
+                <stop offset="1" stop-color="#B8801F"/>
+              </radialGradient>
+              <radialGradient id="g-glow">
+                <stop offset="0" stop-color="#F5B942" stop-opacity=".6"/>
+                <stop offset=".45" stop-color="#F5B942" stop-opacity=".2"/>
+                <stop offset="1" stop-color="#F5B942" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="g-disc" gradientUnits="userSpaceOnUse" cx="210" cy="110" r="270">
+                <stop offset="0" stop-color="#161B2D"/>
+                <stop offset="1" stop-color="#0B0E19"/>
+              </radialGradient>
+              <clipPath id="clip-l"><circle cx="140" cy="160" r="61"/></clipPath>
+              <clipPath id="clip-r"><circle cx="280" cy="160" r="61"/></clipPath>
+            </defs>
+
+            <!-- face and ear tufts -->
+            <path d="M25 178 C25 122 45 82 82 64 L104 16 L142 54 C163 42 186 36 210 36 C234 36 257 42 278 54 L316 16 L338 64 C375 82 395 122 395 178 C395 262 320 322 210 322 C100 322 25 262 25 178 Z" fill="url(#g-disc)"/>
+
+            <!-- glow behind each eye -->
+            <circle class="glow" cx="140" cy="160" r="104" fill="url(#g-glow)"/>
+            <circle class="glow" cx="280" cy="160" r="104" fill="url(#g-glow)"/>
+
+            <!-- left eye -->
+            <g class="eye">
+              <g clip-path="url(#clip-l)">
+                <circle cx="140" cy="160" r="58" fill="url(#g-iris)"/>
+                <g class="pupil-track">
+                  <circle class="pupil" cx="140" cy="160" r="22" fill="#06080F"/>
+                  <circle cx="124" cy="144" r="7" fill="#E9E5D8" opacity=".9"/>
+                </g>
+                <rect class="lid" x="72" y="-40" width="136" height="136"/>
+              </g>
+              <circle class="ring" cx="140" cy="160" r="58" fill="none" stroke="#F5B942" stroke-width="5"/>
+              <path class="closed" d="M100 156 Q140 186 180 156" fill="none" stroke="#E9E5D8" stroke-width="5" stroke-linecap="round"/>
+            </g>
+
+            <!-- right eye -->
+            <g class="eye">
+              <g clip-path="url(#clip-r)">
+                <circle cx="280" cy="160" r="58" fill="url(#g-iris)"/>
+                <g class="pupil-track">
+                  <circle class="pupil" cx="280" cy="160" r="22" fill="#06080F"/>
+                  <circle cx="264" cy="144" r="7" fill="#E9E5D8" opacity=".9"/>
+                </g>
+                <rect class="lid" x="212" y="-40" width="136" height="136"/>
+              </g>
+              <circle class="ring" cx="280" cy="160" r="58" fill="none" stroke="#F5B942" stroke-width="5"/>
+              <path class="closed" d="M240 156 Q280 186 320 156" fill="none" stroke="#E9E5D8" stroke-width="5" stroke-linecap="round"/>
+            </g>
+
+            <!-- beak -->
+            <path d="M196 218 L210 240 L224 218" fill="none" stroke="#E9E5D8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-tag">
+        <p class="tagline">Markets sleep. OWL hunts.</p>
+        <p class="sub">Liquidity hub for tokenized equities · Robinhood Chain · $OWL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THESIS ===================== -->
+  <section class="section" id="thesis" aria-labelledby="thesis-h">
+    <div class="container section-grid">
+      <div class="sticky">
+        <span class="kicker">Thesis</span>
+        <h2 class="h2" id="thesis-h">Stocks close at 4. <em>OWL clocks in.</em></h2>
+        <div class="figure" aria-label="NYSE hours per week">
+          <div><b>6.5</b><span>hours a day</span></div>
+          <div><b>×5</b><span>days a week</span></div>
+          <div><b>32.5<small style="font-size:.6em;color:var(--moon-50)">/168</small></b><span>hours anchored</span></div>
+        </div>
+      </div>
+      <div class="prose">
+        <p>Tokenized stocks trade 24/7. The underlying trades 6.5 hours a day, 5 days a week. That leaves most of the week with no offchain anchor: thin liquidity, wide spreads, real dislocation. Every hub token on Robinhood Chain charges the same flat fee through all of it.</p>
+        <p>OWL prices time. Cheap when the NYSE is open and liquidity is deep. Expensive when it closes and OWL pools become the only price discovery for AAPL, TSLA, SPY. LPs get paid for the risk they actually carry. Arbs pay for the edge they actually take.</p>
+        <p>The flat fee hub subsidizes the most dangerous hours of the week. <strong>OWL charges for them.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MECHANISM ===================== -->
+  <section class="section" id="mechanism" aria-labelledby="mech-h">
+    <div class="container">
+      <div class="section-grid">
+        <div>
+          <span class="kicker">Mechanism</span>
+          <h2 class="h2" id="mech-h">One hook. <em>Four states.</em></h2>
+        </div>
+        <div class="prose">
+          <p>OWL is the common pair across every pool. Every stock token routes through it. One Uniswap v4 hook reads the clock and sets the fee.</p>
+        </div>
+      </div>
+
+      <table class="states" id="states">
+        <thead>
+          <tr>
+            <th scope="col">State</th>
+            <th scope="col">Hours (ET)</th>
+            <th scope="col">Fee</th>
+            <th scope="col">Logic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-state="asleep" tabindex="0" role="button" aria-label="Preview the Asleep state">
+            <td><span class="st-name"><i class="sw sw-asleep" aria-hidden="true"></i>Asleep</span></td>
+            <td class="st-hours">Mon–Fri 9:30–16:00</td>
+            <td class="st-fee">0.05%</td>
+            <td class="st-logic">NYSE open. Deep anchor. Win routing on price.</td>
+          </tr>
+          <tr data-state="stirring" tabindex="0" role="button" aria-label="Preview the Stirring state">
+            <td><span class="st-name"><i class="sw sw-stirring" aria-hidden="true"></i>Stirring</span></td>
+            <td class="st-hours">4:00–9:30, 16:00–20:00</td>
+            <td class="st-fee">0.30%</td>
+            <td class="st-logic">Extended hours. Anchor thinning.</td>
+          </tr>
+          <tr data-state="awake" tabindex="0" role="button" aria-label="Preview the Awake state">
+            <td><span class="st-name"><i class="sw sw-awake" aria-hidden="true"></i>Awake</span></td>
+            <td class="st-hours">Overnight 20:00–4:00</td>
+            <td class="st-fee">0.60%</td>
+            <td class="st-logic">No anchor. OWL pools are the price.</td>
+          </tr>
+          <tr data-state="hunting" tabindex="0" role="button" aria-label="Preview the Hunting state">
+            <td><span class="st-name"><i class="sw sw-hunting" aria-hidden="true"></i>Hunting</span></td>
+            <td class="st-hours">Weekends + holidays</td>
+            <td class="st-fee">1.00%</td>
+            <td class="st-logic">48+ hours of pure onchain discovery.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-note">
+        <span class="live-only">Click a state to preview it on the page</span>
+        <span class="preview-only">Preview mode · the clock is still running</span>
+        <button class="btn-live preview-only" id="backlive" type="button">← Back to live</button>
+      </div>
+
+      <div class="week-wrap">
+        <div class="week-head">
+          <h3 id="week-title">This week, hour by hour</h3>
+          <span class="label" id="week-range"></span>
+        </div>
+        <div class="week" id="week" aria-label="OWL state for each hour of this week"></div>
+        <ul class="week-legend" aria-hidden="true">
+          <li><i class="sw sw-asleep"></i><b>Asleep</b> 0.05%</li>
+          <li><i class="sw sw-stirring"></i><b>Stirring</b> 0.30%</li>
+          <li><i class="sw sw-awake"></i><b>Awake</b> 0.60%</li>
+          <li><i class="sw sw-hunting"></i><b>Hunting</b> 1.00%</li>
+        </ul>
+        <p class="week-caption">Lit hours are hours the NYSE is closed. Open 24/7. Paid for the other 17.5. Holidays and 13:00 early closes are on the same calendar the hook reads.</p>
+      </div>
+
+      <div class="streams">
+        <div>
+          <h3>Volume</h3>
+          <p>All routing between paired stock tokens passes through OWL. <strong>Every swap pays the fee of the hour.</strong></p>
+        </div>
+        <div>
+          <h3>Dislocation</h3>
+          <p>Tokenized stocks drift from their offchain price while markets are closed. Closing that drift is volume, and it happens almost entirely in the high fee window.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE HUNT ===================== -->
+  <section class="section" id="hunt" aria-labelledby="hunt-h">
+    <div class="container section-grid">
+      <div class="sticky">
+        <span class="kicker">The hunt · fee loop</span>
+        <h2 class="h2" id="hunt-h">The parliament earns while the exchange <em>dreams.</em></h2>
+        <p class="hunt-rule">Buybacks execute only while the NYSE is closed. OWL only eats at night.</p>
+      </div>
+      <div>
+        <div class="split" role="img" aria-label="Fee split: 70 percent to liquidity providers, 20 percent market buys OWL, 10 percent to treasury">
+          <div class="split-bar">
+            <i class="s-lp" style="flex: 70"></i>
+            <i class="s-buy" style="flex: 20"></i>
+            <i class="s-tr" style="flex: 10"></i>
+          </div>
+          <ul class="split-legend">
+            <li><b>70%</b><i class="sw s-lp"></i>to LPs. The parliament.</li>
+            <li><b>20%</b><i class="sw s-buy"></i>market buys $OWL</li>
+            <li><b>10%</b><i class="sw s-tr"></i>treasury</li>
+          </ul>
+        </div>
+        <div class="prose" style="margin-top:2.5rem">
+          <p>Every buy is visible onchain during the exact hours the mechanism is earning most. The loop performs the thesis in public.</p>
+        </div>
+        <div class="hunt-window">
+          <span class="label">Hunt window</span>
+          <span class="val"><b id="hunt-state">Open</b> <span class="sep" aria-hidden="true">·</span> <span id="hunt-next"></span></span>
+          <span class="label">Rule</span>
+          <span class="val"><span>Buybacks run in every state except Asleep.</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TOKEN ===================== -->
+  <section class="section" id="token" aria-labelledby="token-h">
+    <div class="container section-grid">
+      <div class="sticky">
+        <span class="kicker">Token</span>
+        <h2 class="h2" id="token-h">Fixed supply. <em>Fair launch.</em></h2>
+        <div class="prose"><p>No mint function. No team allocation gimmicks. The treasury vests linearly and is spent on seeding new nests.</p></div>
+      </div>
+      <dl class="specs">
+        <dt>Ticker</dt><dd><span class="mono">$OWL</span></dd>
+        <dt>Chain</dt><dd>Robinhood Chain</dd>
+        <dt>Supply</dt><dd><span class="mono">1,000,000,000</span> <small>Fixed. No mint function.</small></dd>
+        <dt>Launch</dt><dd>Fair launch. LP locked.</dd>
+        <dt>Team allocation</dt><dd>None.</dd>
+        <dt>Treasury</dt><dd>Vests linearly. <small>Spent on seeding new nests.</small></dd>
+        <dt>Fee engine</dt><dd>Uniswap v4 hook. <small>Time-aware. Four states, one clock.</small></dd>
+        <dt>Contract</dt><dd>Published at launch.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===================== PARLIAMENT ===================== -->
+  <section class="section" id="parliament" aria-labelledby="parl-h">
+    <div class="container">
+      <span class="kicker">Lore</span>
+      <h2 class="h2 visually-hidden" id="parl-h">Parliament</h2>
+      <div class="lore">
+        <div>
+          <h3>Pools are <em>nests.</em></h3>
+          <p>Every stock token pairs with OWL. Every nest routes through the same clock.</p>
+        </div>
+        <div>
+          <h3>LPs are the <em>parliament.</em></h3>
+          <p>The real term for a group of owls. They carry the night and get paid for it.</p>
+        </div>
+        <div>
+          <h3>Buybacks are the <em>hunt.</em></h3>
+          <p>Only after the bell. Only in the dark. Visible to anyone watching the chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="closing" aria-label="Closing">
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="container">
+      <p class="big">Every night the drift grows. <em>Every night OWL eats it.</em></p>
+      <p class="small">Liquidity for the hours nobody else prices.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="risk">
+      <p>Tokenized equities track prices during and outside market hours. Prices can move while the underlying market is closed, and liquidity is thinner then. Higher fees compensate liquidity providers for that risk. They do not remove it.</p>
+    </div>
+    <div>
+      <!-- TODO: point these at the real X, Telegram, docs, and explorer links. -->
+      <ul class="footer-links">
+        <li><a href="#">X</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#mechanism">Clock</a></li>
+      </ul>
+      <p class="fine">
+        <b>Clock.</b> NYSE regular session 9:30–16:00 ET. Extended hours 4:00–9:30 and 16:00–20:00 ET. Weekends and NYSE holidays closed. 13:00 early closes included. Time comes from your device.<br>
+        © 2026 OWL. Not investment advice.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<div class="tip" id="tip" role="tooltip" aria-hidden="true"></div>
+
+<script src="js/owl-clock.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
