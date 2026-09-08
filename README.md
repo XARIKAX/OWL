@@ -1,86 +1,78 @@
-# OWL — the website
+# OWL — website
 
-Static site for **$OWL**, the time-aware liquidity hub for tokenized equities on Robinhood Chain.
-The site runs on the same clock as the fee hook: while the NYSE is open the owl sleeps and the fee
-reads 0.05%; when it closes the eyes open, the sky fills with fireflies, the status flips, and the fee climbs.
+Static site for **$OWL**, a liquidity hub for tokenized equities on Robinhood Chain. A Uniswap v4 hook
+sets each pool's fee from the NYSE calendar. The site runs the same calendar in the browser: the status,
+fee, countdowns, schedule, and the owl update every second in Eastern time.
 
-No build step. No dependencies. Open `index.html` or drop the folder on any static host.
+No build step. No dependencies. Serve the folder from any static host, or open `index.html` directly.
 
 ## Files
 
 | Path | What it is |
 |---|---|
-| `index.html` | The page: hero, thesis, mechanism, nests, stats, the hunt, token, lore, fee-quote drawer. |
-| `css/styles.css` | Night ink / moonlight / owl amber. One theme. |
-| `js/owl-clock.js` | The clock. NYSE calendar → one of four states. Also runs in Node. |
-| `js/data.js` | Nests, stats, and the hunt log. Loads `data/nests.json` when present, otherwise generates a marked sample dataset from the fee model. |
-| `js/sky.js` | The night behind the page: stars, fireflies, pine horizon, moon. One fixed canvas, driven by the state. |
-| `js/site.js` | Wires everything: status and countdowns, the 24h dial, the week strip, the nests table, stats tiles and the 168-hour fee chart, the hunt log, the quote drawer, preview mode, the owl's eyes. |
-| `data/nests.example.json` | The shape live data should take. |
-| `assets/favicon.svg` | Two eyes that never close. |
+| `index.html` | The page. |
+| `css/styles.css` | Styles. One theme. |
+| `js/owl-clock.js` | NYSE calendar → one of four fee states. Also runs in Node. |
+| `js/data.js` | Pools, stats, and buyback data. Loads `data/nests.json` when present, otherwise generates a sample dataset from the fee model. |
+| `js/sky.js` | Canvas background: stars, horizon, fireflies. Reads the current state. |
+| `js/site.js` | Page wiring: status, countdowns, schedule strip and dial, pools table, stats, chart, buyback log, quote drawer, menu. |
+| `data/nests.example.json` | The shape of the live data file. |
+| `assets/favicon.svg` | Favicon. |
 | `assets/og.png` | 1200×630 social card. |
 
-## The clock
+## Fee states
 
-All times Eastern. Decided by the NYSE calendar, nothing else.
+All times Eastern. Decided by the NYSE calendar only.
 
 | State | When | Fee |
 |---|---|---|
 | Asleep | Mon–Fri 9:30–16:00 (13:00 on early-close days) | 0.05% |
 | Stirring | 4:00–9:30 and 16:00–20:00 (13:00–17:00 on early-close days) | 0.30% |
 | Awake | 20:00–4:00 between two trading days | 0.60% |
-| Hunting | From the last after-hours close to the next pre-market open across weekends and NYSE holidays | 1.00% |
+| Hunting | From the last after-hours close to the next pre-market open, across weekends and NYSE holidays | 1.00% |
 
-Holidays are computed from the NYSE rules for any year (New Year's Day, MLK Day, Washington's Birthday,
-Good Friday, Memorial Day, Juneteenth, Independence Day, Labor Day, Thanksgiving, Christmas, with the
-Saturday→Friday / Sunday→Monday observance rules and the no-observance rule for a Saturday New Year's Day).
+Holidays are computed from the NYSE rules for any year: New Year's Day, Martin Luther King Jr. Day, Washington's
+Birthday, Good Friday, Memorial Day, Juneteenth, Independence Day, Labor Day, Thanksgiving, Christmas. Saturday
+holidays are observed on Friday and Sunday holidays on Monday, except New Year's Day on a Saturday, which is not observed.
 Early closes: July 3 when it is a weekday, the day after Thanksgiving, and Christmas Eve when it is a weekday.
 
-Unscheduled closures (a national day of mourning, for example) go in `EXTRA_CLOSURES` at the top of
-`js/owl-clock.js` as `'YYYY-MM-DD': 'Reason'`.
+Unscheduled closures go in `EXTRA_CLOSURES` at the top of `js/owl-clock.js` as `'YYYY-MM-DD': 'Reason'`.
 
-Time comes from the visitor's device clock, converted to Eastern with `Intl`. The hook reads block time; the
-two can differ by seconds, never by state for long.
+Time comes from the visitor's device clock, converted to Eastern with `Intl`. The hook reads block time. The two
+can differ by seconds.
 
-## Data: sample now, live at launch
+## Data
 
-Nests, stats, and the hunt log are rendered from whatever `js/data.js` loads:
+Until launch, pools, stats, and the buyback log show a sample dataset generated in `js/data.js` from a seeded
+model: relative volume per hour by state (asleep 1.00, stirring 0.55, awake 0.35, hunting 0.25) times the fee of
+the hour. Every surface that shows it carries a "Sample data" badge.
 
-1. `data/nests.json`, if it exists. Publish it in the shape of `data/nests.example.json` with `"sample": false`
-   and every "Sample data" badge disappears. Refresh it on whatever cadence the indexer runs.
-2. Otherwise a deterministic sample dataset generated from the fee model, and the page shows "Sample data"
-   badges on every surface that uses it. The model assumes relative hourly volume of
-   asleep 1.00 · stirring 0.55 · awake 0.35 · hunting 0.25 and prices each hour at that state's fee.
-
-The 168-hour "Where the fees come from" chart and the per-nest fee split are always computed from the
-current week's calendar, so holidays and early closes show up in the shape of the week.
-
-## Interactive pieces
-
-- **Fee quote drawer** (Buy OWL, Get a fee quote, Fee quote on a nest): prices a swap at the live rate and at
-  all four states, and says what the same swap pays after the next change. The "Provide liquidity" tab computes
-  a deposit's share of a nest and 70% of that nest's trailing 7-day fees at that share. Execution buttons are
-  disabled until launch.
-- **Nests table**: sort by any column, search by ticker or name, click a row for its fee split, 24h volume, and actions.
-- **State table**: click a row to preview that state across the whole page. The clock keeps running underneath.
-- **24h dial and week strip**: hover for the fee of any hour.
+To go live, publish `data/nests.json` in the shape of `data/nests.example.json` with `"sample": false`. The loader
+prefers that file when it exists. Fields per pool: `ticker`, `name`, `pair`, `tvl`, `vol24h`, `fees24h`, `fees7d`,
+`feesLifetime`, `lps`, and `hourly` (24 entries of `hour`, `state`, `volume`). Top level: `updated`, `priceUsd`,
+`totals`, `buybacks` (`time`, `state`, `usd`, `owl`, optional `tx`), and `hunt` (`boughtUsd`, `boughtOwl`, `count`).
 
 ## Preview and testing
 
-Query parameters, useful for screenshots and demos:
+Query parameters:
 
-- `?state=hunting` — show a state (`asleep`, `stirring`, `awake`, `hunting`). Marked as a preview.
-- `?at=2026-09-11T20:00:00-04:00` — run the live clock from that moment.
+- `?state=hunting` shows a state (`asleep`, `stirring`, `awake`, `hunting`). The page marks it as a preview. The clock keeps running underneath.
+- `?at=2026-09-11T20:00:00-04:00` runs the live clock from that moment. Useful for screenshots and for checking copy at a given hour.
+
+Clicking a row in the state table does the same as `?state=`.
+
+The quote drawer prices a swap at the current state and at each of the four states, and computes an LP share for a
+deposit against a pool's TVL. The swap and add-liquidity buttons are disabled until launch.
 
 ## Before launch
 
-- Social links (X, Telegram, Docs) in the nav, the mobile menu, and the footer point at `#`. Set them.
-- Set `og:image` and `twitter:image` to absolute URLs once the domain exists. The card is `assets/og.png`.
-- The contract row in the token table reads "Published at launch". Replace it with the address and an explorer link.
-- Wire the swap and liquidity buttons in the drawer to the DEX once nests are live.
-- Publish `data/nests.json` from the indexer.
+- Footer and nav links for X, Telegram, and Docs point at `#`. Set them.
+- Set `og:image` and `twitter:image` to absolute URLs once the domain exists.
+- Replace the "Published at launch" contract row with the address and an explorer link.
+- Wire the drawer's swap and add-liquidity buttons to the DEX.
+- Publish `data/nests.json` from your indexer.
 
 ## Deploy
 
-Any static host. For GitHub Pages: Settings → Pages → deploy from branch, root folder. `.nojekyll` is included so
-the folder ships as-is. For Vercel or Netlify: import the repo, no build command, output directory `.`.
+Any static host. GitHub Pages: Settings → Pages → deploy from branch, root folder. `.nojekyll` is included.
+Vercel or Netlify: import the repo, no build command, output directory `.`.

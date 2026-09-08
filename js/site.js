@@ -57,10 +57,10 @@
 
   /* copy */
   var PREVIEW_LEDE = {
-    asleep: 'The NYSE is open. The anchor is deep. OWL wins routing on price.',
-    stirring: 'Extended hours. The anchor is thinning. The fee climbs.',
-    awake: 'No anchor. OWL pools are the price.',
-    hunting: 'Weekend. 48+ hours of pure onchain discovery. OWL pools are the price.'
+    asleep: 'NYSE regular session, Mon–Fri 9:30–16:00 ET. OWL pools charge 0.05%.',
+    stirring: 'NYSE pre-market and after-hours. OWL pools charge 0.30%.',
+    awake: 'Overnight, 20:00–4:00 ET between trading days. OWL pools charge 0.60%.',
+    hunting: 'Weekends and NYSE holidays. OWL pools charge 1.00% until the next pre-market.'
   };
   function huntHoliday(info) {
     if (!info.since || !info.until) return info.holiday;
@@ -69,18 +69,17 @@
     return null;
   }
   function ledeFor(info) {
+    var untilText = info.until ? whenText(info.until, info.et, '') : '';
     switch (info.state.key) {
-      case 'asleep': return 'The NYSE is open. The anchor is deep. OWL wins routing on price.';
+      case 'asleep': return 'The NYSE regular session is open. OWL pools charge 0.05% until the ' + (info.day.early ? '13:00 early close.' : '16:00 close.');
       case 'stirring': return info.phase === 'premarket'
-        ? 'Before the bell. The anchor is thin. The fee climbs.'
-        : 'After the bell. Extended hours. The anchor is thinning.';
-      case 'awake': return 'No anchor until 4:00. OWL pools are the price.';
+        ? 'NYSE pre-market. OWL pools charge 0.30% until the 9:30 open.'
+        : 'NYSE after-hours. OWL pools charge 0.30% until ' + untilText + '.';
+      case 'awake': return 'The NYSE is closed until the 4:00 pre-market. OWL pools charge 0.60% overnight.';
       default: {
         var hol = huntHoliday(info);
         var hours = info.since && info.until ? Math.round((info.until - info.since) / 3600000) : 0;
-        return (hol ? 'The NYSE is closed for ' + hol + '.' : 'It is the weekend.')
-          + (hours ? ' The exchange dreams for ' + hours + ' hours.' : '')
-          + ' OWL pools are the price.';
+        return 'The NYSE is closed ' + (hol ? 'for ' + hol : 'for the weekend') + (hours ? ' (' + hours + ' hours)' : '') + '. OWL pools charge 1.00% until ' + untilText + '.';
       }
     }
   }
@@ -198,7 +197,7 @@
     $('fee').textContent = s.feeText;
     $('nav-state').textContent = preview ? s.label + ' · preview' : s.label;
     $('nav-fee').textContent = s.feeText;
-    $('eyebrow').textContent = preview ? 'Preview · not live · ' + s.hours : (offset ? 'Simulated clock · Eastern time' : 'Live · NYSE clock · Eastern time');
+    $('eyebrow').textContent = preview ? 'Preview · not live · ' + s.hours : (offset ? 'Simulated clock · Eastern time' : 'Live · NYSE calendar · Eastern time');
 
     $('clock').textContent = fDate.format(d) + ' · ' + fClock.format(d) + ' ET';
     $('nav-time').textContent = fClock.format(d).slice(0, 5) + ' ET';
@@ -209,7 +208,7 @@
       $('since').textContent = 'Preview';
     } else {
       if (live.until && live.nextState) {
-        $('next').textContent = live.nextState.verb + ' ' + whenText(live.until, live.et);
+        $('next').textContent = live.nextState.label + ' ' + whenText(live.until, live.et);
         $('next-in').textContent = 'in ' + fmtSpan(live.until - d);
       }
       $('since').textContent = live.since ? whenText(live.since, live.et, '') + ' · ' + fmtSpan(d - live.since) : '—';
@@ -323,14 +322,14 @@
     var wrap = el('div', 'detail');
     // fee + share by state
     var c1 = el('div');
-    c1.appendChild(el('h4', null, 'Fee in this nest'));
+    c1.appendChild(el('h4', null, 'Current fee'));
     var fn = el('div', 'fee-now'); fn.setAttribute('data-role', 'fee-now'); c1.appendChild(fn);
     var stats = el('div', 'detail-stats');
-    [['Lifetime fees', fmtUsd(nest.feesLifetime)], ['To the parliament · 7d', fmtUsd(Math.round(nest.fees7d * 0.7))]].forEach(function (p) {
+    [['Lifetime fees', fmtUsd(nest.feesLifetime)], ['LP fees · 7d', fmtUsd(Math.round(nest.fees7d * 0.7))]].forEach(function (p) {
       var dv = el('div'); dv.appendChild(document.createTextNode(p[0])); dv.appendChild(el('b', null, p[1])); stats.appendChild(dv);
     });
     c1.appendChild(stats);
-    c1.appendChild(el('h4', null, 'Where its fees come from · this week'));
+    c1.appendChild(el('h4', null, 'Fee revenue by state · this week'));
     var ul = el('ul', 'by-state-mini');
     var prof = D.weekProfile(now());
     ORDER.forEach(function (k) {
@@ -348,7 +347,7 @@
     var cap = el('div', 'spark-cap'); cap.appendChild(el('span', null, hm(nest.hourly[0].hour))); cap.appendChild(el('span', null, 'now')); c2.appendChild(cap);
     // actions
     var c3 = el('div', 'detail-actions');
-    var b1 = el('button', 'btn btn-primary btn-sm', 'Fee quote'); b1.type = 'button'; b1.setAttribute('data-open-drawer', 'swap'); b1.setAttribute('data-route', nest.ticker);
+    var b1 = el('button', 'btn btn-primary btn-sm', 'Quote a swap'); b1.type = 'button'; b1.setAttribute('data-open-drawer', 'swap'); b1.setAttribute('data-route', nest.ticker);
     var b2 = el('button', 'btn btn-ghost btn-sm', 'Provide liquidity'); b2.type = 'button'; b2.setAttribute('data-open-drawer', 'lp'); b2.setAttribute('data-route', nest.ticker);
     c3.appendChild(b1); c3.appendChild(b2);
     wrap.appendChild(c1); wrap.appendChild(c2); wrap.appendChild(c3);
@@ -367,14 +366,14 @@
     var shown = showAll || query ? list : list.slice(0, 12);
     nestsBody.innerHTML = '';
     if (!shown.length) {
-      var tr0 = el('tr', 'empty'); var td0 = el('td', null, 'No nest matches "' + query + '".'); td0.colSpan = 6; tr0.appendChild(td0); nestsBody.appendChild(tr0);
+      var tr0 = el('tr', 'empty'); var td0 = el('td', null, 'No pool matches "' + query + '".'); td0.colSpan = 6; tr0.appendChild(td0); nestsBody.appendChild(tr0);
     }
     var live = C.at(now());
     shown.forEach(function (n) {
       var tr = el('tr', 'nest' + (openTicker === n.ticker ? ' open' : ''));
       tr.setAttribute('data-ticker', n.ticker); tr.tabIndex = 0; tr.setAttribute('role', 'button'); tr.setAttribute('aria-expanded', openTicker === n.ticker ? 'true' : 'false');
       var td = el('td'); var pair = el('span', 'n-pair'); pair.appendChild(el('span', 'tk', n.ticker)); pair.appendChild(document.createTextNode(n.pair + ' ')); pair.appendChild(el('small', null, n.name)); td.appendChild(pair); tr.appendChild(td);
-      [['TVL', fmtUsd(n.tvl), ''], ['24h volume', fmtUsd(n.vol24h), ''], ['24h fees', fmtUsd(n.fees24h), 'fees'], ['7d fees', fmtUsd(n.fees7d), 'fees'], ['Parliament', fmtNum(n.lps), '']].forEach(function (c) {
+      [['TVL', fmtUsd(n.tvl), ''], ['24h volume', fmtUsd(n.vol24h), ''], ['24h fees', fmtUsd(n.fees24h), 'fees'], ['7d fees', fmtUsd(n.fees7d), 'fees'], ['LPs', fmtNum(n.lps), '']].forEach(function (c) {
         var t = el('td', 'num' + (c[2] ? ' ' + c[2] : ''), c[1]); t.setAttribute('data-label', c[0]); tr.appendChild(t);
       });
       nestsBody.appendChild(tr);
@@ -386,8 +385,8 @@
     renderDetailFees(live);
     var more = $('nests-more');
     more.hidden = !!query || list.length <= 12;
-    more.textContent = showAll ? 'Show fewer' : 'Show all ' + list.length + ' nests';
-    $('nests-total').textContent = list.length + ' nests · TVL ' + fmtUsd(data.totals.tvl) + ' · 24h volume ' + fmtUsd(data.totals.vol24h);
+    more.textContent = showAll ? 'Show fewer' : 'Show all ' + list.length + ' pools';
+    $('nests-total').textContent = list.length + ' pools · TVL ' + fmtUsd(data.totals.tvl) + ' · 24h volume ' + fmtUsd(data.totals.vol24h);
   }
 
   function toggleNest(ticker) {
@@ -441,8 +440,8 @@
       ['t-fees24h', t.fees24h, fmtUsd], ['t-bought', data.hunt.boughtOwl, function (n) { return fmtNum(n) + ' OWL'; }], ['t-lps', t.lps, fmtNum]
     ];
     tiles.forEach(function (x) { $(x[0]).textContent = x[2](x[1]); });
-    $('t-bought-note').textContent = fmtUsd(data.hunt.boughtUsd) + ' across ' + fmtNum(data.hunt.count) + ' buys. All while the NYSE was closed.';
-    $('t-nests-note').textContent = 'LP positions across ' + data.nests.length + ' nests.';
+    $('t-bought-note').textContent = fmtUsd(data.hunt.boughtUsd) + ' across ' + fmtNum(data.hunt.count) + ' buybacks, all executed while the NYSE was closed.';
+    $('t-nests-note').textContent = 'Across ' + data.nests.length + ' pools.';
     $('stats-updated').textContent = 'Updated ' + fLog.format(new Date(data.updated)) + ' ET';
     if ('IntersectionObserver' in window) {
       var seen = false;
@@ -469,7 +468,7 @@
       var b = el('b', null, fmtUsd(Math.round(prof.byState[k] * total)));
       var bar = el('div', 'bar'); var fill = el('i'); fill.style.width = (prof.byState[k] * 100).toFixed(1) + '%'; fill.style.background = COLORS[k]; bar.appendChild(fill);
       li.appendChild(lab); li.appendChild(b); li.appendChild(bar);
-      li.appendChild(el('span', 'muted', ' ' + (prof.byState[k] * 100).toFixed(0) + '% of the week'));
+      li.appendChild(el('span', 'muted', ' ' + (prof.byState[k] * 100).toFixed(0) + '% of this week\'s fees'));
       ul.appendChild(li);
     });
     $('chart-range').textContent = fRange.format(C.wallToDate(prof.week.monday, 720)) + ' – ' + fRange.format(C.wallToDate(prof.week.monday + 6, 720)) + ' · by hour · ET';
@@ -600,7 +599,7 @@
     var amt = amountOf('q-amount', 0);
     $('q-state').textContent = s.label + ' · ' + s.feeText;
     $('q-fee').textContent = fmtUsd(amt * s.fee / 100, 2);
-    $('q-fee-note').textContent = 'of ' + fmtUsd(amt);
+    $('q-fee-note').textContent = 'on ' + fmtUsd(amt);
     Array.prototype.forEach.call($('q-states').querySelectorAll('tr'), function (tr) {
       var k = tr.getAttribute('data-state');
       tr.querySelector('.num').textContent = fmtUsd(amt * STATES[k].fee / 100, 2);
@@ -612,10 +611,10 @@
     if (!html.classList.contains('drawer-open')) return;
     var amt = amountOf('q-amount', 0);
     var q = $('q-next');
-    if (preview) { q.textContent = 'Previewing ' + STATES[preview].label + '. The live fee is ' + live.state.feeText + '.'; return; }
+    if (preview) { q.textContent = 'Preview of the ' + STATES[preview].label + ' state. The live fee is ' + live.state.feeText + '.'; return; }
     if (!live.until || !live.nextState) { q.textContent = ''; return; }
     q.innerHTML = '';
-    q.appendChild(document.createTextNode(live.nextState.verb + ' ' + whenText(live.until, live.et) + ' · in ' + fmtSpan(live.until - now()) + '. The same swap then pays '));
+    q.appendChild(document.createTextNode(live.nextState.label + ' ' + whenText(live.until, live.et) + ' · in ' + fmtSpan(live.until - now()) + '. The same swap then pays '));
     q.appendChild(el('b', null, fmtUsd(amt * live.nextState.fee / 100, 2)));
     q.appendChild(document.createTextNode('.'));
   }
@@ -628,7 +627,7 @@
     var share = dep > 0 ? dep / (n.tvl + dep) : 0;
     $('lp-share').textContent = (share * 100).toFixed(share < 0.1 ? 2 : 1) + '%';
     $('lp-fees').textContent = fmtUsd(share * n.fees7d * 0.7, 2);
-    $('lp-note').textContent = n.pair + ' holds ' + fmtUsd(n.tvl) + ' and earned ' + fmtUsd(n.fees7d) + ' in fees over the last 7 days. ' + fmtNum(n.lps) + ' owls in this parliament.';
+    $('lp-note').textContent = n.pair + ' holds ' + fmtUsd(n.tvl) + ' in liquidity and collected ' + fmtUsd(n.fees7d) + ' in fees over the last 7 days across ' + fmtNum(n.lps) + ' LP positions.';
   }
   $('q-amount').addEventListener('input', function () { renderQuote(C.at(now())); });
   $('q-route').addEventListener('change', function () { renderQuote(C.at(now())); });
