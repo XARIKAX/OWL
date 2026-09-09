@@ -110,13 +110,17 @@
     g.addColorStop(1, '#04060B');
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
 
-    // moon
+    // moon (hidden while the intro's own moon is on screen)
     var mx = W * 0.82 + px * -18, my = H * 0.16 + py * -10 - scrollY * 0.03, mr = Math.min(W, H) * 0.06;
-    var mo = 0.05 + night * 0.5;
-    var halo = ctx.createRadialGradient(mx, my, mr * 0.6, mx, my, mr * 6);
-    halo.addColorStop(0, 'rgba(233,229,216,' + (0.10 * mo).toFixed(3) + ')'); halo.addColorStop(1, 'rgba(233,229,216,0)');
-    ctx.fillStyle = halo; ctx.fillRect(mx - mr * 6, my - mr * 6, mr * 12, mr * 12);
-    ctx.beginPath(); ctx.arc(mx, my, mr, 0, 6.283); ctx.fillStyle = 'rgba(233,229,216,' + (0.16 * mo).toFixed(3) + ')'; ctx.fill();
+    var mo = html.getAttribute('data-moon') === 'off' ? 0 : 0.05 + night * 0.5;
+    if (mo > 0.001) {
+      var halo = ctx.createRadialGradient(mx, my, mr * 0.6, mx, my, mr * 6);
+      halo.addColorStop(0, 'rgba(233,229,216,' + (0.08 * mo).toFixed(3) + ')'); halo.addColorStop(1, 'rgba(233,229,216,0)');
+      ctx.fillStyle = halo; ctx.fillRect(mx - mr * 6, my - mr * 6, mr * 12, mr * 12);
+      var disc = ctx.createRadialGradient(mx - mr * 0.3, my - mr * 0.3, 0, mx, my, mr);
+      disc.addColorStop(0, 'rgba(240,236,224,' + (0.22 * mo).toFixed(3) + ')'); disc.addColorStop(0.85, 'rgba(233,229,216,' + (0.12 * mo).toFixed(3) + ')'); disc.addColorStop(1, 'rgba(233,229,216,0)');
+      ctx.beginPath(); ctx.arc(mx, my, mr, 0, 6.283); ctx.fillStyle = disc; ctx.fill();
+    }
 
     // stars
     for (var i = 0; i < stars.length; i++) {

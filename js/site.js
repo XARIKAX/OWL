@@ -132,7 +132,7 @@
   weekEl.addEventListener('mouseleave', hideTip);
 
   /* dial: today's 24 hours as a ring */
-  var dial = $('dial');
+  var dials = Array.prototype.slice.call(document.querySelectorAll('svg.dial'));
   var dialDay = null;
   var SVG = 'http://www.w3.org/2000/svg';
   function svgEl(tag, attrs) { var e = document.createElementNS(SVG, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); return e; }
@@ -142,7 +142,8 @@
     var large = (to - from) > 720 ? 1 : 0;
     return 'M' + a[0].toFixed(2) + ' ' + a[1].toFixed(2) + ' A' + r + ' ' + r + ' 0 ' + large + ' 1 ' + b[0].toFixed(2) + ' ' + b[1].toFixed(2);
   }
-  function buildDial(wk) {
+  function buildDial(wk) { dials.forEach(function (d) { buildOneDial(d, wk); }); }
+  function buildOneDial(dial, wk) {
     dial.innerHTML = '';
     dial.appendChild(svgEl('circle', { class: 'track', cx: 60, cy: 60, r: 46 }));
     var day = wk.days[wk.todayIndex];
@@ -158,23 +159,27 @@
       t.textContent = lb[1];
       dial.appendChild(t);
     });
-    dial.appendChild(svgEl('line', { class: 'hand', id: 'dial-hand', x1: 60, y1: 60, x2: 60, y2: 8 }));
+    dial.appendChild(svgEl('line', { class: 'hand', x1: 60, y1: 60, x2: 60, y2: 8 }));
     dial.appendChild(svgEl('circle', { class: 'hub', cx: 60, cy: 60, r: 3 }));
   }
   function updateDial(wk, shownKey) {
-    var hand = $('dial-hand');
-    if (!hand) return;
     var p = polar(wk.nowMinute, 52);
-    hand.setAttribute('x2', p[0].toFixed(2)); hand.setAttribute('y2', p[1].toFixed(2));
-    var arcs = dial.querySelectorAll('.arc');
-    for (var i = 0; i < arcs.length; i++) arcs[i].classList.toggle('dim', preview ? arcs[i].getAttribute('data-state') !== shownKey : false);
+    dials.forEach(function (dial) {
+      var hand = dial.querySelector('.hand');
+      if (!hand) return;
+      hand.setAttribute('x2', p[0].toFixed(2)); hand.setAttribute('y2', p[1].toFixed(2));
+      var arcs = dial.querySelectorAll('.arc');
+      for (var i = 0; i < arcs.length; i++) arcs[i].classList.toggle('dim', preview ? arcs[i].getAttribute('data-state') !== shownKey : false);
+    });
   }
-  dial.addEventListener('mousemove', function (e) {
-    var a = e.target.closest ? e.target.closest('.arc') : null;
-    if (!a) { hideTip(); return; }
-    showTip(a.getAttribute('data-tip'), e.clientX, e.clientY);
+  dials.forEach(function (dial) {
+    dial.addEventListener('mousemove', function (e) {
+      var a = e.target.closest ? e.target.closest('.arc') : null;
+      if (!a) { hideTip(); return; }
+      showTip(a.getAttribute('data-tip'), e.clientX, e.clientY);
+    });
+    dial.addEventListener('mouseleave', hideTip);
   });
-  dial.addEventListener('mouseleave', hideTip);
 
   /* render */
   var rows = Array.prototype.slice.call(document.querySelectorAll('#states tr[data-state]'));
@@ -195,6 +200,7 @@
     }
     $('lede').textContent = preview ? PREVIEW_LEDE[s.key] : ledeFor(live);
     $('fee').textContent = s.feeText;
+    $('fee-scene').textContent = s.feeText;
     $('nav-state').textContent = preview ? s.label + ' · preview' : s.label;
     $('nav-fee').textContent = s.feeText;
     $('eyebrow').textContent = preview ? 'Preview · not live · ' + s.hours : (offset ? 'Simulated clock · Eastern time' : 'Live · NYSE calendar · Eastern time');
@@ -213,6 +219,10 @@
       }
       $('since').textContent = live.since ? whenText(live.since, live.et, '') + ' · ' + fmtSpan(d - live.since) : '—';
     }
+
+    $('scene-live').textContent = preview
+      ? 'Preview · ' + s.label + ' · fee ' + s.feeText
+      : 'Live · ' + live.state.label + ' · fee ' + live.state.feeText + (live.until && live.nextState ? ' · ' + live.nextState.label + ' ' + whenText(live.until, live.et) : '');
 
     rows.forEach(function (tr) {
       tr.classList.toggle('is-now', tr.getAttribute('data-state') === live.state.key);
@@ -254,36 +264,50 @@
   $('backlive-hero').addEventListener('click', goLive);
 
   /* the owl watches */
-  var owl = $('owl');
-  var tracks = owl.querySelectorAll('.pupil-track');
-  var target = { x: 0, y: 0 }, cur = { x: 0, y: 0 }, hasPointer = false;
+  var owls = Array.prototype.slice.call(document.querySelectorAll('svg.owl')).map(function (svg) {
+    return { svg: svg, tracks: svg.querySelectorAll('.pupil-track'), target: { x: 0, y: 0 }, cur: { x: 0, y: 0 } };
+  });
+  var pointer = null, hasPointer = false;
   function eyesOpen() { return html.getAttribute('data-state') !== 'asleep' && !html.classList.contains('pre'); }
+  function visibleOwl(o) { var sc = o.svg.closest('.scene'); return !sc || sc.classList.contains('active'); }
   document.addEventListener('pointermove', function (e) {
     if (e.pointerType === 'touch') return;
     hasPointer = true;
-    var r = owl.getBoundingClientRect();
-    var cx = r.left + r.width / 2, cy = r.top + r.height * 0.47;
-    var dx = e.clientX - cx, dy = e.clientY - cy;
-    var dist = Math.hypot(dx, dy) || 1;
-    var k = Math.min(1, dist / 260);
-    target = { x: dx / dist * 13 * k, y: dy / dist * 11 * k };
+    pointer = { x: e.clientX, y: e.clientY };
+    owls.forEach(function (o) {
+      if (!visibleOwl(o)) return;
+      var r = o.svg.getBoundingClientRect();
+      var eyeY = o.svg.classList.contains('owl-perch') ? 0.38 : 0.47;
+      var cx = r.left + r.width / 2, cy = r.top + r.height * eyeY;
+      var dx = pointer.x - cx, dy = pointer.y - cy;
+      var dist = Math.hypot(dx, dy) || 1;
+      var k = Math.min(1, dist / 260);
+      o.target = { x: dx / dist * 13 * k, y: dy / dist * 11 * k };
+    });
   }, { passive: true });
   function drift() {
-    if (!hasPointer && !reduced && eyesOpen()) target = { x: (Math.random() * 2 - 1) * 10, y: (Math.random() * 2 - 1) * 6 };
+    if (!hasPointer && !reduced && eyesOpen()) {
+      var t = { x: (Math.random() * 2 - 1) * 10, y: (Math.random() * 2 - 1) * 6 };
+      owls.forEach(function (o) { o.target = t; });
+    }
     setTimeout(drift, 1800 + Math.random() * 2600);
   }
   function frame() {
-    var tx = eyesOpen() ? target.x : 0, ty = eyesOpen() ? target.y : 0;
-    cur.x += (tx - cur.x) * 0.1;
-    cur.y += (ty - cur.y) * 0.1;
-    var tf = 'translate(' + cur.x.toFixed(2) + ' ' + cur.y.toFixed(2) + ')';
-    for (var i = 0; i < tracks.length; i++) tracks[i].setAttribute('transform', tf);
+    var open = eyesOpen();
+    owls.forEach(function (o) {
+      if (!visibleOwl(o)) return;
+      var tx = open ? o.target.x : 0, ty = open ? o.target.y : 0;
+      o.cur.x += (tx - o.cur.x) * 0.1;
+      o.cur.y += (ty - o.cur.y) * 0.1;
+      var tf = 'translate(' + o.cur.x.toFixed(2) + ' ' + o.cur.y.toFixed(2) + ')';
+      for (var i = 0; i < o.tracks.length; i++) o.tracks[i].setAttribute('transform', tf);
+    });
     requestAnimationFrame(frame);
   }
   function blink() {
     if (!reduced && eyesOpen()) {
-      owl.classList.add('blink');
-      setTimeout(function () { owl.classList.remove('blink'); }, 300);
+      owls.forEach(function (o) { o.svg.classList.add('blink'); });
+      setTimeout(function () { owls.forEach(function (o) { o.svg.classList.remove('blink'); }); }, 300);
     }
     setTimeout(blink, 4500 + Math.random() * 5000);
   }
@@ -651,7 +675,7 @@
   setTimeout(function () { html.classList.remove('pre'); }, reduced ? 0 : 420);
   drift();
   requestAnimationFrame(frame);
-  setTimeout(blink, 3000);
+  setTimeout(blink, 6500);
 
   if (D) {
     D.load().then(function (d) {

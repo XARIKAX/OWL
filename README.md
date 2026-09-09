@@ -14,11 +14,41 @@ No build step. No dependencies. Serve the folder from any static host, or open `
 | `css/styles.css` | Styles. One theme. |
 | `js/owl-clock.js` | NYSE calendar → one of four fee states. Also runs in Node. |
 | `js/data.js` | Pools, stats, and buyback data. Loads `data/nests.json` when present, otherwise generates a sample dataset from the fee model. |
-| `js/sky.js` | Canvas background: stars, horizon, fireflies. Reads the current state. |
+| `js/sky.js` | Canvas background: stars, moon, horizon, fireflies. Reads the current state. |
+| `js/scenes.js` | The pinned intro: five scenes cross-faded by scroll progress, plus the routing-network and fee-split canvases. |
 | `js/site.js` | Page wiring: status, countdowns, schedule strip and dial, pools table, stats, chart, buyback log, quote drawer, menu. |
 | `data/nests.example.json` | The shape of the live data file. |
 | `assets/favicon.svg` | Favicon. |
 | `assets/og.png` | 1200×630 social card. |
+
+## Intro scenes
+
+The top of the page is a sticky stage. Five scenes cross-fade as the visitor scrolls about five screens, then the
+page releases into the Now block, Stats, Mechanism, Pools, Buybacks, Token, Glossary. Dots on the right jump between
+scenes. Under `prefers-reduced-motion` the scenes stack as normal sections.
+
+| Scene | Copy | Artwork |
+|---|---|---|
+| 1 | OWL is a liquidity hub for tokenized stocks on Robinhood Chain. | Owl perched on a branch against a full moon (SVG, live eyes) |
+| 2 | Every stock token is paired with OWL. A swap between two stocks routes through two OWL pools. | Ticker nodes linked to the OWL node; swaps pulse ticker → OWL → ticker (canvas) |
+| 3 | One Uniswap v4 hook sets the fee from the NYSE calendar… | The 24-hour fee dial at full size (SVG, live hand) |
+| 4 | Every fee splits 70% / 20% / 10%… | Fee particles flowing into three bins (canvas) |
+| 5 | OWL IS … · Markets sleep. OWL hunts. | Close-up owl with the live status headline (SVG) |
+
+### Replacing scene art with illustrations
+
+The vector and canvas art can be swapped for painted illustrations per scene. Add an `<img>` inside the scene's
+`.scene-art` (or set it as a CSS background on that element) and remove the SVG or canvas. Art direction that matches
+the page:
+
+- Palette: night ink `#06080F`, moonlight `#E9E5D8`, owl amber `#F5B942`. No other saturated hues.
+- Style: nocturnal, quiet, illustrated rather than photographic. Deep shadows, amber light sources only (eyes, fireflies, moon reflections).
+- Scene 1: an owl on a bare branch in front of a full moon, pines below, fireflies. Eyes must stay visible so the live-eye overlay can sit on top.
+- Scene 2: a constellation or mycelium-like network of amber nodes converging on one point.
+- Scene 3: a large ring or dial, four segments, one lit.
+- Scene 4: a stream of light splitting into three unequal channels.
+- Scene 5: the owl's face, close, eyes open.
+- Deliver at 2000 px on the long edge, PNG with transparency where the sky should show through.
 
 ## Fee states
 
