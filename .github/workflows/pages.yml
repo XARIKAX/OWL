@@ -3,9 +3,8 @@
 # Settings → Pages once DNS points at GitHub.
 name: Deploy to GitHub Pages
 
+# Manual only. Switch back to a push trigger if the site is hosted on GitHub Pages.
 on:
-  push:
-    branches: [claude/owl-token-brief-e1aslv]
   workflow_dispatch:
 
 permissions:
