@@ -97,12 +97,11 @@ deposit against a pool's TVL. The swap and add-liquidity buttons are disabled un
 ## Before launch
 
 - Footer and nav links for X, Telegram, and Docs point at `#`. Set them.
-- Set `og:image` and `twitter:image` to absolute URLs once the domain exists.
 - Replace the "Published at launch" contract row with the address and an explorer link.
 - Wire the drawer's swap and add-liquidity buttons to the DEX.
 - Publish `data/nests.json` from your indexer.
 
 ## Deploy
 
-Any static host. GitHub Pages: Settings → Pages → deploy from branch, root folder. `.nojekyll` is included.
-Vercel or Netlify: import the repo, no build command, output directory `.`.
+Production is https://owlliquidity.com, served by Vercel from this repository with no build step. Pushes to the
+production branch deploy automatically. `.github/workflows/pages.yml` is a manual GitHub Pages deploy kept as a fallback.
