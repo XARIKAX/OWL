@@ -33,7 +33,7 @@ scenes. Under `prefers-reduced-motion` the scenes stack as normal sections.
 | 2 | Every stock token is paired with OWL. A swap between two stocks routes through two OWL pools. | Ticker nodes linked to the OWL node; swaps pulse ticker → OWL → ticker (canvas) |
 | 3 | One Uniswap v4 hook sets the fee from the NYSE calendar… | The 24-hour fee dial at full size (SVG, live hand) |
 | 4 | Every fee splits 70% / 20% / 10%… | Fee particles flowing into three bins (canvas) |
-| 5 | OWL IS … · Open 24/7. Priced by the hour. | Close-up owl with the live status headline (SVG) |
+| 5 | OWL IS … · OWL hunts at night. | Close-up owl with the live status headline (SVG) |
 
 ### Replacing scene art with illustrations
 
